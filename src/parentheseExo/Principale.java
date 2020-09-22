@@ -19,9 +19,15 @@ public class Principale {
 				stack.push("]");
 			}
 
-			else if (phrase.charAt(i) == ')' && stack.peek().equals(")")) {
+			else if (phrase.charAt(i) == ')') {
+				if (!stack.peek().equals(")")) {
+					return false;
+				}
 				stack.pop();
-			} else if (phrase.charAt(i) == ']' && stack.peek().equals("]")) {
+			} else if (phrase.charAt(i) == ']' ) {
+				if (!stack.peek().equals("]")) {
+					return false;
+				}
 				stack.pop();
 			}
 
