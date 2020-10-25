@@ -16,24 +16,13 @@ class Node {
 		this.right = right;
 	}
 
-	public Node find (int v){
-	    
-	    Node n = new Node();
-	    if(v == this.value) {return this;}
-	    
-	    if (v < this.value && this.left != null) {
-	        if(n.value == v) return n;
-	        n =  this.left.find(v);
+	public Node find(int v) {
+	    Node current = this;
+	  
+	    while (current != null && current.value != v) {
+	        current = v < current.value ? current.left : current.right;
 	    }
-	    
-	    if (v > this.value && this.right != null) {
-	        if(n.value == v) return n;
-	        n = this.right.find(v);
-	        
-	    }
-	    
-	    return n;
-	    
+	    return current;
 	}
 	
 }
