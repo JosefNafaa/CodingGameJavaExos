@@ -1,3 +1,6 @@
+import wordCounter.ProgramTester;
+import wordCounter.WordCounter;
+
 public class Main {
     public static void main(String ar[])
     {

@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import wordCounter.Program;
+
 public class ProgramTester {
     Program p;
     void init(){
